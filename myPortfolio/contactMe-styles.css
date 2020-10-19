@@ -1,0 +1,24 @@
+body{
+    background-color: rgb(245, 245, 245);
+    margin: auto;
+}
+
+header {  
+    text-align: center;
+    font-weight: bold;
+    font-size: xx-large;
+    background-color: tomato;
+    padding: 50px;
+  }
+
+.form {
+    margin: 0 auto; 
+    margin: fit;
+    width: 250px;
+    position: relative;
+    }
+    
+.buttonHolder { 
+    text-align: center;
+    padding-bottom: 35px;
+}
