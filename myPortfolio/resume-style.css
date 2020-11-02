@@ -1,7 +1,7 @@
 body{
 }
 .grid-container {
-    margin: 40px;  
+    margin: 10px;  
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1.25fr 0.25fr 0.75fr 0.25fr 0.5fr 0.25fr 1fr 1fr;
@@ -16,22 +16,62 @@ body{
       "employmentOceanSuns"
       "employmentComStream";
   }
+
   .header { 
     grid-area: header; 
     text-align: center;
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr;
+    grid-template-rows: 1fr;
+    gap: 0px 5px;
+    grid-template-areas:
+      "header-img header-text";
   }
+  
+  .header-img {
+    grid-area: header-img;
+    height: 250px;
+    width: 375px;
+    margin: 5px;
+    background-color: white;
+    /* position: fixed; */
+  }
+
+img:hover {
+  opacity: 0;
+  } 
+ 
+.header-text{
+    grid-area: header-text;
+  }
+ 
+h1:active {
+  animation: fade;
+}
+
+h1 span {
+    background-color: black;
+  }
+
+ h1 span:hover {
+    background-color: white;
+  }
+
   .summaryTitle { 
     grid-area: summaryTitle; 
     background-color: lightgray;
   }
+  
   .summaryContent { 
     grid-area: summaryContent; 
-    padding-top: 20px;
+    padding: 10px;
   }
+
   .educationTitle { 
     grid-area: educationTitle; 
     background-color: lightgray;
   }
+  
   .educationContent { 
     grid-area: educationContent; 
     padding-top: 40px;
@@ -42,21 +82,220 @@ body{
     grid-template-areas:
     "eduColumn1 eduColumn2";
   }
+
   .eduColumn1{
     grid-area: eduColumn1;
     text-align: left;
   }
+
   .eduColumn2{
     grid-area: eduColumn2;
     text-align: right;
   }
+
   .employmentTitle { 
     grid-area: employmentTitle; 
     background-color: lightgray;
   }
+
   .employmentOceanSuns { 
     grid-area: employmentOceanSuns; 
-    border-bottom: dotted grey;
-    padding-top: 10px;
   }
   
+  .employmentComStream { 
+    grid-area: employmentComStream; 
+  }
+  
+  @media (min-width: 300px) {
+    .grid-container {
+      margin: 10px;  
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1.25fr 0.15fr 0.5fr 0.15fr 0.40fr 0.15fr 0.5fr 0.5fr;
+      gap: 0px 0px;
+      grid-template-areas:
+        "header"
+        "summaryTitle"
+        "summaryContent"
+        "educationTitle"
+        "educationContent"
+        "employmentTitle"
+        "employmentOceanSuns"
+        "employmentComStream";
+    }
+    
+    .header { 
+      grid-area: header; 
+      text-align: center;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.5 0.5fr;
+      gap: 0px 5px;
+      grid-template-areas:
+        "header-img"
+        "header-text";
+    }
+    .header-img {
+      grid-area: header-img;
+      height: 250px;
+      width: 375px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .header-img:hover {
+      color: red;
+    } 
+
+    .header-text{
+      grid-area: header-text;
+    }
+    .summaryTitle { 
+      grid-area: summaryTitle; 
+      background-color: lightgray;
+    }
+    
+    .summaryContent { 
+      grid-area: summaryContent; 
+      padding: 10px;
+    }
+  
+    .educationTitle { 
+      grid-area: educationTitle; 
+      background-color: lightgray;
+    }
+    
+    .educationContent { 
+      grid-area: educationContent; 
+      padding-top: 40px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
+      gap: 0px 0px;
+      grid-template-areas:
+      "eduColumn1 eduColumn2";
+    }
+  
+    .eduColumn1{
+      grid-area: eduColumn1;
+      text-align: left;
+    }
+  
+    .eduColumn2{
+      grid-area: eduColumn2;
+      text-align: right;
+    }
+  
+    .employmentTitle { 
+      grid-area: employmentTitle; 
+      background-color: lightgray;
+    }
+  
+    .employmentOceanSuns { 
+      grid-area: employmentOceanSuns; 
+    }
+    
+    .employmentComStream { 
+      grid-area: employmentComStream; 
+    }
+
+}
+
+
+
+@media (min-width: 800px) {
+  .grid-container {
+    margin: 10px;  
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.25fr 0.25fr 0.75fr 0.25fr 0.5fr 0.25fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "header"
+      "summaryTitle"
+      "summaryContent"
+      "educationTitle"
+      "educationContent"
+      "employmentTitle"
+      "employmentOceanSuns"
+      "employmentComStream";
+  }
+
+  .header { 
+    grid-area: header; 
+    text-align: center;
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr;
+    grid-template-rows: 1fr;
+    gap: 0px 5px;
+    grid-template-areas:
+      "header-img header-text";
+  }
+  .header-img {
+    grid-area: header-img;
+    height: 250px;
+    width: 375px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 10px;
+  }
+
+  .header-img:hover {
+    color: red;
+  } 
+
+  .header-text{
+    grid-area: header-text;
+  }
+
+  .summaryTitle { 
+    grid-area: summaryTitle; 
+    background-color: lightgray;
+  }
+  
+  .summaryContent { 
+    grid-area: summaryContent; 
+    padding: 10px;
+  }
+
+  .educationTitle { 
+    grid-area: educationTitle; 
+    background-color: lightgray;
+  }
+  
+  .educationContent { 
+    grid-area: educationContent; 
+    padding-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+    "eduColumn1 eduColumn2";
+  }
+
+  .eduColumn1{
+    grid-area: eduColumn1;
+    text-align: left;
+  }
+
+  .eduColumn2{
+    grid-area: eduColumn2;
+    text-align: right;
+  }
+
+  .employmentTitle { 
+    grid-area: employmentTitle; 
+    background-color: lightgray;
+  }
+
+  .employmentOceanSuns { 
+    grid-area: employmentOceanSuns; 
+  }
+  
+  .employmentComStream { 
+    grid-area: employmentComStream; 
+  }
+}

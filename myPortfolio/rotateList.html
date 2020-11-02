@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotate</title>
+</head>
+<body>
+    <p>The shift method returns the new array length.</p>
+
+    <button onclick="rotate()">Try it!</button>
+    
+    <p id="demo"></p> 
+
+    <script>
+
+        const rotate = (arr) => {
+            let letterList = ['a', 'b', 'c'];
+            
+            let temp = letterList.shift();
+            letterList.push(temp);
+            document.getElementById("demo").innerHTML = letterList;
+
+        }
+
+    </script>
+
+</body>
+</html>

@@ -4,17 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./resume-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
     <title>Resume</title>
 </head>
 <body>
     <div class="grid-container">
         <div class="header">
-            <p style="font-size: 30pt; font-weight: bold;">
-                Test Resume</p>
-            <p style="font-size: 16pt;">
+            <h1 class="animate__animated animate__fadeIn" style="font-size: 24pt; font-weight: bold;">
+                Jared Coats<br>
+            <span class= "contactInfo" style="font-size: 12pt; font-weight: normal;">
                 Austin, Texas<br>
-            <br>512.123.4567<br>
-            <br>emailname@emailserver.com</p>
+                512.123.4567<br>
+                emailname@emailserver.com</span>
+           <br><span style="font-size: 10pt; font-weight: normal; background-color: yellow;">
+           (Hover to see contact info)</span></h1>
+            <img class="header-img" style="animation: animate__fadeIn;" src="./professional-image.jpg">
         </div>
         <div class="summaryTitle">
             <p style="font-size: 20pt; color: rgb(0, 110, 255); padding-left: 10px;">Summary</p>
@@ -40,29 +45,39 @@
             <p style="font-size: 20pt; color: rgb(0, 110, 255); padding-left: 10px;">Previous Employment</p>
         </div>
         <div class="employmentOceanSuns">
-            <p style="font-weight:bold; padding-left: 10px;">
-                Ocean Suns<br>
-                <br>Lead Manger
-                    <p style="font-weight:normal; padding-left: 10px;">
-                        Austin, Texas<br>
-                    <br>June 2010 - Present 
-                    </p>
-                <p style="padding-left: 10px;">
+            <div class="osTitle" style="column-count: 2;">
+                <p style="font-weight:bold; padding-left: 10px; padding-top: 10px;">
+                    Ocean Suns <br><br>
+                    Lead Manger
+                </p>
+                <p style="font-weight:normal; text-align: right; padding-top: 25px;">
+                    Austin, Texas<br><br>
+                    June 2010 - Present 
+                </p>
+            </div>
+
+            <p class="employmentOSContent" style="padding-left: 10px; border-bottom: dotted grey; padding-bottom: 20px;">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Et aliquam reiciendis quas culpa quam hic ipsa voluptate accusantium quos! Quo praesentium labore amet aliquam iure nulla assumenda nostrum inventore nisi odit, alias quidem ullam dolorum similique necessitatibus in animi aut ducimus at quibusdam, ab hic accusantium perspiciatis. Velit, possimus error.
-                </p>
-        </div>
-        <div class="employmentComStream">
-                <p class="csTitle" style="font-weight:bold; padding-left: 10px; padding-top: 10px;">
-                ComStream<br>
-                <br>Assistant Manger
-                    <p style="font-weight:normal; padding-left: 10px;">
-                        Dallas, Texas<br>
-                        <br>June 2000 - May 2010
-                    </p>
             </p>
-            <p style="padding-left: 10px;">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore non laboriosam nobis porro voluptatem laudantium voluptate! Repudiandae, doloribus quis quisquam ratione quasi alias odit hic aspernatur obcaecati eaque tempora? Sunt rerum quidem magnam voluptatum exercitationem dolorum assumenda rem maxime aut?
+        </div>
+        
+        <div class="employmentComStream">
+            <div class="csTitle" style="column-count: 2;">   
+                <p style="font-weight:bold; padding-left: 10px;">
+                    
+                    ComStream<br><br>
+                    Assistant Manger
                 </p>
+                 <p style="font-weight:normal; text-align: right; padding-top: 15px;">
+                            
+                            Dallas, Texas<br><br>
+                            June 2000 - May 2010
+                </p>
+            </div>
+            <p class="employmentCSContent" style="padding-left: 10px;">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore non laboriosam nobis porro voluptatem laudantium voluptate! Repudiandae, doloribus quis quisquam ratione quasi alias odit hic aspernatur obcaecati eaque tempora? Sunt rerum quidem magnam voluptatum exercitationem dolorum assumenda rem maxime aut?
+                
+            </p>
         </div>
     </div>
 </body>
